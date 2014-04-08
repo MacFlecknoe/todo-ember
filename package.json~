@@ -3,6 +3,9 @@
 	"version": "0.0.1",
 	"dependencies": {},
 	"properties" : {
+		"config" : {
+			"src": "tasks/options/*.js"
+		},
 		"paths": {
 			"app": "app",
 			"dist": "dist"

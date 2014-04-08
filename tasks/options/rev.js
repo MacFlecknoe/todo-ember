@@ -2,10 +2,10 @@ module.exports = {
   "dist": {
     "files": {
       "src": [
-        "<%= paths.dist %>/scripts/{,*/}*.js",
-        "<%= paths.dist %>/styles/{,*/}*.css",
-        "<%= paths.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}",
-        "<%= paths.dist %>/styles/fonts/*"
+        "<%= pkg.properties.paths.dist %>/scripts/{,*/}*.js",
+        "<%= pkg.properties.paths.dist %>/styles/{,*/}*.css",
+        "<%= pkg.properties.paths.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}",
+        "<%= pkg.properties.paths.dist %>/styles/fonts/*"
       ]
     }
   }

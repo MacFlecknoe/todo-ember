@@ -1,6 +1,6 @@
 module.exports = {
   "html": ".tmp/index.html",
   "options": {
-    "dest": "<%= paths.dist %>"
+    "dest": "<%= pkg.properties.paths.dist %>"
   }
 }

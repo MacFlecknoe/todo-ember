@@ -1,0 +1,5 @@
+module.exports = {
+  "server": {
+    "path": "http://<%= properties.hostname %>:<%= properties.ports.livereload %>"
+  }
+}

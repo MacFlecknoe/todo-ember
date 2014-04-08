@@ -1,12 +1,12 @@
 module.exports = {
   options: {
-    sassDir: "<%= paths.app %>/styles",
+    sassDir: "<%= pkg.properties.paths.app %>/styles",
     cssDir: ".tmp/styles",
     generatedImagesDir: ".tmp/images/generated",
-    imagesDir: "<%= paths.app %>/images",
-    javascriptsDir: "<%= paths.app %>/scripts",
-    fontsDir: "<%= paths.app %>/styles/fonts",
-    importPath: "<%= paths.app %>/vendor",
+    imagesDir: "<%= pkg.properties.paths.app %>/images",
+    javascriptsDir: "<%= pkg.properties.paths.app %>/scripts",
+    fontsDir: "<%= pkg.properties.paths.app %>/styles/fonts",
+    importPath: "<%= pkg.properties.paths.app %>/vendor",
     httpImagesPath: "/images",
     httpGeneratedImagesPath: "/images/generated",
     httpFontsPath: "/styles/fonts",

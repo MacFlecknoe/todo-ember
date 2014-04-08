@@ -2,7 +2,7 @@ module.exports = {
   "options": {},
   "dist": {
     "files": {
-      ".tmp/scripts/compiled-templates.js": "<%= paths.app %>/templates/{,*/}*.hbs"
+      ".tmp/scripts/compiled-templates.js": "<%= pkg.properties.paths.app %>/templates/{,*/}*.hbs"
     }
   }
 }

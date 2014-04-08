@@ -1,0 +1,10 @@
+module.exports = {
+  "all": {
+    "options": {
+      "run": true,
+      "urls": [
+        "http://<%= properties.hostname %>:<%= properties.ports.livereload %>/index.html"
+      ]
+    }
+  }
+}

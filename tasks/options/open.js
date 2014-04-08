@@ -1,5 +1,5 @@
 module.exports = {
   "server": {
-    "path": "http://<%= hostname %>:<%= ports.livereload %>"
+    "path": "http://<%= pkg.properties.hostname %>:<%= pkg.properties.ports.livereload %>"
   }
 }

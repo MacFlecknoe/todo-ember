@@ -5,8 +5,8 @@ module.exports = {
         "expand": true,
         "flatten": true,
         "filter": "isFile",
-        "cwd": "<%= paths.app %>/vendor/",
-        "dest": "<%= paths.app %>/styles/fonts/",
+        "cwd": "<%= pkg.properties.paths.app %>/vendor/",
+        "dest": "<%= pkg.properties.paths.app %>/styles/fonts/",
         "src": [
           "bootstrap-sass/dist/fonts/**",
           "font-awesome/fonts/**"
@@ -19,8 +19,8 @@ module.exports = {
       {
         "expand": true,
         "dot": true,
-        "cwd": "<%= paths.app %>",
-        "dest": "<%= paths.dist %>",
+        "cwd": "<%= pkg.properties.paths.app %>",
+        "dest": "<%= pkg.properties.paths.dist %>",
         "src": [
           "*.{ico,txt}",
           ".htaccess",

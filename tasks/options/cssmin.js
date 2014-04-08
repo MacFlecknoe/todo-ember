@@ -1,9 +1,9 @@
 module.exports = {
   "dist": {
     "files": {
-      "<%= paths.dist %>/styles/main.css": [
+      "<%= pkg.properties.paths.dist %>/styles/main.css": [
         ".tmp/styles/{,*/}*.css",
-        "<%= paths.app %>/styles/{,*/}*.css"
+        "<%= pkg.properties.paths.app %>/styles/{,*/}*.css"
       ]
     }
   }

@@ -4,23 +4,33 @@ module.exports = function (grunt) {
 
 	// show elapsed time at the end
 	require('time-grunt')(grunt);
+
+	var path = require('path');
 	
-	// Load grunt tasks automatically
-    	require('load-grunt-tasks')(grunt);
-
 	// read the package file to retrieve our build configuration variables
-	var properties = grunt.file.readJSON('package.json').properties;
+	var pkg = require('./package.json');
 
-	// inject load-grunt-configs configuation into properties object. 
-	properties.config = {
-		'src' : 'tasks/options/*.js' // defines task configuration directory
-	};
+	var config = grunt.util._.extend({},
+		require('load-grunt-config')(grunt, {
+			configPath: path.join(__dirname, 'tasks/options'),
+			loadGruntTasks: false,
+			init: false
+		}),
+		// Custom options have precedence
+		require('load-grunt-config')(grunt, { 
+			configPath: path.join(__dirname, 'tasks/custom-options'),
+			init: false
+		})
+	);
+	// place properties into grunt config so that they may be retrieved from tasks
+	config.pkg = pkg;
 
-	// load task configs from files stored in seperate directory and initialize grunt. allow devs to override settings in properties via environmental variables
-	var configs = require('load-grunt-configs')(grunt, grunt.util._.extend({}, properties, process.env));
+	// allow env variables to be retrievable
+	config.env = process.env;
 
-	grunt.initConfig(configs);
-    
+	// Loads tasks in `tasks/` folder
+	grunt.loadTasks('tasks'); 
+	
 	grunt.registerTask('serve', function (target) {
 		if (target === 'dist') {
 			return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
@@ -79,4 +89,6 @@ module.exports = function (grunt) {
 		'test',
 		'build'
 	]);
+
+	grunt.initConfig(config);
 };

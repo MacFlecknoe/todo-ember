@@ -3,7 +3,7 @@ module.exports = {
     "options": {
       "run": true,
       "urls": [
-        "http://<%= hostname %>:<%= ports.livereload %>/index.html"
+        "http://<%= pkg.properties.hostname %>:<%= pkg.properties.ports.livereload %>/index.html"
       ]
     }
   }

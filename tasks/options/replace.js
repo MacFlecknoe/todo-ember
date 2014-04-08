@@ -8,7 +8,7 @@ module.exports = {
     },
     "files": [
       {
-        "src": "<%= paths.app %>/index.html",
+        "src": "<%= pkg.properties.paths.app %>/index.html",
         "dest": ".tmp/index.html"
       }
     ]
@@ -22,7 +22,7 @@ module.exports = {
     },
     "files": [
       {
-        "src": "<%= paths.app %>/index.html",
+        "src": "<%= pkg.properties.paths.app %>/index.html",
         "dest": ".tmp/index.html"
       }
     ]

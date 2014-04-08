@@ -1,0 +1,10 @@
+module.exports = {
+  "dist": {
+    "files": {
+      "<%= properties.paths.dist %>/styles/main.css": [
+        ".tmp/styles/{,*/}*.css",
+        "<%= properties.paths.app %>/styles/{,*/}*.css"
+      ]
+    }
+  }
+}

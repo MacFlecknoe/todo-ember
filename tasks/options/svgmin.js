@@ -3,9 +3,9 @@ module.exports = {
     "files": [
       {
         "expand": true,
-        "cwd": "<%= paths.app %>/images",
+        "cwd": "<%= pkg.properties.paths.app %>/images",
         "src": "{,*/}*.svg",
-        "dest": "<%= paths.dist %>/images"
+        "dest": "<%= pkg.properties.paths.dist %>/images"
       }
     ]
   }

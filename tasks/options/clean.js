@@ -4,8 +4,8 @@ module.exports = {
 			dot: true,
 			src: [
 				'.tmp',
-				'<%= paths.dist %>/*',
-				'!<%= paths.dist %>/.git*'
+				'<%= pkg.properties.paths.dist %>/*',
+				'!<%= pkg.properties.paths.dist %>/.git*'
 			]
 		}]
 	},

@@ -1,0 +1,7 @@
+module.exports = {
+  "app": {
+    "options": {},
+    "src": "<%= properties.paths.app %>/scripts/app.js",
+    "dest": ".tmp/scripts/combined-scripts.js"
+  }
+}

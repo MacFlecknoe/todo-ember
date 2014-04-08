@@ -1,13 +1,13 @@
 module.exports = {
   "html": [
-    "<%= paths.dist %>/{,*/}*.html"
+    "<%= pkg.properties.paths.dist %>/{,*/}*.html"
   ],
   "css": [
-    "<%= paths.dist %>/styles/{,*/}*.css"
+    "<%= pkg.properties.paths.dist %>/styles/{,*/}*.css"
   ],
   "options": {
     "dirs": [
-      "<%= paths.dist %>"
+      "<%= pkg.properties.paths.dist %>"
     ]
   }
 }

@@ -4,8 +4,8 @@ var mountFolder = function (connect, dir) {
 
 module.exports = {
 	options: {
-		port: '<%= ports.livereload %>',
-		hostname: '<%= hostname %>'
+		port: '<%= pkg.properties.ports.livereload %>',
+		hostname: '<%= pkg.properties.hostname %>'
 	},
 	livereload: {
 		options: {
@@ -13,7 +13,7 @@ module.exports = {
 				return [
 					lrSnippet,
 					mountFolder(connect, '.tmp'),
-					mountFolder(connect, '<%= paths.app %>')
+					mountFolder(connect, '<%= pkg.properties.paths.app %>')
 				];
 			}
 		}
@@ -32,7 +32,7 @@ module.exports = {
 		options: {
 			middleware: function (connect) {
 				return [
-			    		mountFolder(connect, '<%= paths.dist %>')
+			    		mountFolder(connect, '<%= pkg.properties.paths.dist %>')
 				];
 			}
 		}

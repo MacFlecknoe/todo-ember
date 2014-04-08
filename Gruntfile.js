@@ -12,10 +12,12 @@ module.exports = function (grunt) {
 	var properties = grunt.file.readJSON('package.json').properties;
 
 	// inject load-grunt-configs configuation into properties object. defines task configuration directory
-	properties.config.src = "tasks/options/*.js";
+	properties.config = {
+		'src' : 'tasks/options/*.js'
+	};
 
-	// load task configs from files stored in seperate directory and initialize grunt
-	var configs = require('load-grunt-configs')(grunt, properties);
+	// load task configs from files stored in seperate directory and initialize grunt. allow devs to override settings in properties via environmental variables
+	var configs = require('load-grunt-configs')(grunt, grunt.util._.extend({}, properties, process.env));
 
 	grunt.initConfig(configs);
     

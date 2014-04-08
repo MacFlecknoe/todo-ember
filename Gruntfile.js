@@ -14,9 +14,9 @@ module.exports = function (grunt) {
 			src: 'tasks/options/*.js'
 		},
 		paths: {
-		    // Configurable paths
-		    app: 'app',
-		    dist: 'dist'
+			// Configurable paths
+			app: 'app',
+			dist: 'dist'
 		},
 		ports : {
 			app : '9000',

@@ -31,27 +31,6 @@ module.exports = function (grunt) {
 	var configs = require('load-grunt-configs')(grunt, options);
 
 	grunt.initConfig(configs);
-
-	// Parallelize most of the build process
-	grunt.util._.merge(configs, {
-		concurrent: {
-			'server': [
-				'emberTemplates',
-				'compass:server'
-			],
-			'test': [
-				'emberTemplates',
-				'compass'
-			],
-			'dist': [
-				'emberTemplates',
-				'compass:dist',
-				'imagemin',
-				'svgmin',
-				'htmlmin'
-			]
-		}
-	});
     
 	grunt.registerTask('serve', function (target) {
 		if (target === 'dist') {

@@ -11,6 +11,7 @@ module.exports = function (grunt) {
 	// configuration variables used within task definitions
 	var options = {
 		config : {
+			// location of task configuration files
 			src: 'tasks/options/*.js'
 		},
 		paths: {

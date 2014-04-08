@@ -11,9 +11,9 @@ module.exports = function (grunt) {
 	// read the package file to retrieve our build configuration variables
 	var properties = grunt.file.readJSON('package.json').properties;
 
-	// inject load-grunt-configs configuation into properties object. defines task configuration directory
+	// inject load-grunt-configs configuation into properties object. 
 	properties.config = {
-		'src' : 'tasks/options/*.js'
+		'src' : 'tasks/options/*.js' // defines task configuration directory
 	};
 
 	// load task configs from files stored in seperate directory and initialize grunt. allow devs to override settings in properties via environmental variables

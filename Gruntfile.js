@@ -1,8 +1,5 @@
 'use strict';
 
-var LIVERELOAD_PORT = 35729;
-require('connect-livereload')({port: LIVERELOAD_PORT});
-
 module.exports = function (grunt) {
 
 	// show elapsed time at the end

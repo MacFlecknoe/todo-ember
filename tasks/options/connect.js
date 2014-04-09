@@ -7,7 +7,7 @@ module.exports = {
 		options: {
 			middleware: function (connect) {
 				return [
-					require('connect-livereload')({port: '<%= pkg.properties.ports.livereload %>'}),
+					require('connect-livereload')({port: '35729'}), // what does this do? it wont resolve variables
 					connect.static(require('path').resolve('.tmp')),
 					connect.static(require('path').resolve('<%= pkg.properties.paths.app %>'))
 				];

@@ -1,6 +1,6 @@
 module.exports = {
 	options: {
-		port: '<%= pkg.properties.ports.livereload %>',
+		port: '<%= pkg.properties.ports.app %>',
 		hostname: '<%= pkg.properties.hostname %>'
 	},
 	livereload: {

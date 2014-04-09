@@ -6,7 +6,7 @@ module.exports = {
     all: [
         'Gruntfile.js',
         '<%= pkg.properties.paths.app %>/scripts/{,*/}*.js',
-        '!<%= pkg.properties.paths.app %>/scripts/vendor/*',
+        '!<%= pkg.properties.paths.app %>/vendor/*',
         'test/spec/{,*/}*.js'
     ]
 };

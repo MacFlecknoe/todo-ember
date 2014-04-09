@@ -8,6 +8,7 @@
       "dist": "dist"
     },
     "ports": {
+      "app": 7773,
       "livereload": "35729"
     },
     "hostname": "localhost"

@@ -1,7 +1,3 @@
-var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
-};
- 
 module.exports = {
 	options: {
 		port: '<%= pkg.properties.ports.livereload %>',
@@ -12,8 +8,8 @@ module.exports = {
 			middleware: function (connect) {
 				return [
 					require('connect-livereload')({port: '<%= pkg.properties.ports.livereload %>'}),
-					mountFolder(connect, '.tmp'),
-					mountFolder(connect, '<%= pkg.properties.paths.app %>')
+					connect.static(require('path').resolve('.tmp')),
+					connect.static(require('path').resolve('<%= pkg.properties.paths.app %>'))
 				];
 			}
 		}
@@ -22,8 +18,8 @@ module.exports = {
 		options: {
 			middleware: function (connect) {
 				return [
-					mountFolder(connect, 'test'),
-					mountFolder(connect, '.tmp')
+					connect.static(require('path').resolve('test')),
+					connect.static(require('path').resolve('.tmp'))
 				];
 			}
 		}
@@ -32,7 +28,7 @@ module.exports = {
 		options: {
 			middleware: function (connect) {
 				return [
-			    		mountFolder(connect, '<%= pkg.properties.paths.dist %>')
+					connect.static(require('path').resolve('<%= pkg.properties.paths.dist %>'))
 				];
 			}
 		}

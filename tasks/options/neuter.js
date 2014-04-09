@@ -1,3 +1,7 @@
+//
+// Concatenate files in the order you require.
+// https://github.com/trek/grunt-neuter
+//
 module.exports = {
 	app: {
 		options: {

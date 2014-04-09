@@ -1,3 +1,7 @@
+//
+// Start a connect web server.
+// https://github.com/gruntjs/grunt-contrib-connect
+//
 module.exports = {
 	options: {
 		port: '<%= pkg.properties.ports.app %>',
@@ -5,32 +9,29 @@ module.exports = {
 	},
 	livereload: {
 		options: {
-			middleware: function (connect) {
-				return [
-					require('connect-livereload')({port: '35729'}), // what does this do? it wont resolve variables
-					connect.static(require('path').resolve('.tmp')),
-					connect.static(require('path').resolve('<%= pkg.properties.paths.app %>'))
-				];
-			}
+			// Inject a live reload script tag into your page using connect-livereload
+			livereload: '<%= pkg.properties.ports.livereload %>',
+			// The base (or root) directory from which files will be served.
+			base: [
+				'.tmp', 
+				'<%= pkg.properties.paths.app %>'
+			]
 		}
 	},
 	test: {
 		options: {
-			middleware: function (connect) {
-				return [
-					connect.static(require('path').resolve('test')),
-					connect.static(require('path').resolve('.tmp'))
-				];
-			}
+			base: [
+				'test', 
+				'.tmp'
+			]
 		}
 	},
 	dist: {
 		options: {
-			middleware: function (connect) {
-				return [
-					connect.static(require('path').resolve('<%= pkg.properties.paths.dist %>'))
-				];
-			}
+			livereload: '<%= pkg.properties.ports.livereload %>',
+			base: [
+				'<%= pkg.properties.paths.dist %>'
+			]
 		}
 	}
 }

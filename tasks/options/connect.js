@@ -1,7 +1,7 @@
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
-
+ 
 module.exports = {
 	options: {
 		port: '<%= pkg.properties.ports.livereload %>',
@@ -11,7 +11,7 @@ module.exports = {
 		options: {
 			middleware: function (connect) {
 				return [
-					lrSnippet,
+					require('connect-livereload')({port: '<%= pkg.properties.ports.livereload %>'}),
 					mountFolder(connect, '.tmp'),
 					mountFolder(connect, '<%= pkg.properties.paths.app %>')
 				];

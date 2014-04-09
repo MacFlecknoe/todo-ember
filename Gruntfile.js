@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 			init: false
 		})
 	);
-	// place properties into grunt config so that they may be retrieved from tasks
+	// place package properties into grunt config so that they may be retrieved from tasks
 	config.pkg = pkg;
 
 	// allow env variables to be retrievable

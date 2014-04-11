@@ -69,23 +69,23 @@ module.exports = function (grunt) {
 		if (target === 'release') {
 			return grunt.task.run(['release', 'open', 'connect:dist:keepalive']);
 		}
-		grunt.task.run(['debug', 'open', 'connect:livereload', 'watch']);
+		return grunt.task.run(['debug', 'open', 'connect:livereload', 'watch']);
 	});
 
 	// creates a distribution and runs tests against it (grunt test:release || grunt test:debug)
 	grunt.registerTask('test', function (target) {
 		if (target === 'release') {
-			grunt.task.run(['release', 'connect:test', 'mocha']);
+			return grunt.task.run(['release', 'connect:test', 'mocha']);
 		}
-		grunt.task.run(['debug', 'connect:test', 'mocha']);
+		return grunt.task.run(['debug', 'connect:test', 'mocha']);
 	});
 
 	// creates a distribution and uploads it to artifact repository (grunt deploy:release || grunt deploy:debug)
 	grunt.registerTask('deploy', function (target) {
 		if (target === 'release') {
-			grunt.task.run(['release', 'maven:release']);
+			return grunt.task.run(['release', 'maven:release']);
 		}
-		grunt.task.run(['debug', 'maven:debug']);
+		return grunt.task.run(['debug', 'maven:debug']);
 	});
 
 	grunt.registerTask('default', [

@@ -35,10 +35,10 @@ module.exports = function (grunt) {
 	grunt.loadTasks('tasks'); 
 	
 	grunt.registerTask('serve', function (target) {
-		if (target === 'dist') {
-			return grunt.task.run(['build', 'connect:dist:keepalive', 'open']);
+		if (target === 'release') {
+			return grunt.task.run(['release', 'open', 'connect:dist:keepalive']);
 		}
-		grunt.task.run(['debug', 'connect:livereload', 'open', 'watch']);
+		grunt.task.run(['debug', 'open', 'connect:livereload', 'watch']);
 	});
 
 	grunt.registerTask('test', [
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
 		'mocha'
 	]);
 
-	grunt.registerTask('build', [
+	grunt.registerTask('release', [
 		'clean:dist', // clean out working directories
 		'replace:dist', // replace variables in app/index.html... notably ember data and creates .tmp/index.html
 		'useminPrepare', // configures concat cssmin and uglify based on meta data

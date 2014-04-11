@@ -6,3 +6,4 @@ dist
 #Don't ignore any dist folder inside our dependencies
 !node_modules/**
 **/*~
+*.zip

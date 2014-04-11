@@ -58,7 +58,7 @@ module.exports = function (grunt) {
 		'copy:debug', // copy vendor files from app to dist
 	]);
 
-	// grunt serve:release || grunt serve
+	// creates a distribution and opens it up in a web browser (grunt serve:release || grunt serve:debug)
 	grunt.registerTask('serve', function (target) {
 		if (target === 'release') {
 			return grunt.task.run(['release', 'open', 'connect:dist:keepalive']);
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
 		grunt.task.run(['debug', 'open', 'connect:livereload', 'watch']);
 	});
 
-	// grunt test:release || grunt test
+	// creates a distribution and runs tests against it (grunt test:release || grunt test:debug)
 	grunt.registerTask('test', function (target) {
 		if (target === 'release') {
 			grunt.task.run(['release', 'connect:test', 'mocha']);
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('default', [
-		'serve',
+		'serve:debug',
 	]);
 
 	grunt.initConfig(config);

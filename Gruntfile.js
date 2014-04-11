@@ -36,18 +36,9 @@ module.exports = function (grunt) {
 	
 	grunt.registerTask('serve', function (target) {
 		if (target === 'dist') {
-			return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+			return grunt.task.run(['build', 'connect:dist:keepalive', 'open']);
 		}
-		grunt.task.run([
-			'clean:dist', // clean out working directories
-			'replace:dist', // replace variables in app/index.html... notably ember data and creates .tmp/index.html
-			'concurrent:dist', // creates .tmp/scripts/compiled_templates.js & creates dist/images
-			'neuter:app', // creates .tmp/scripts/combined_scripts.js
-			'copy:debug', // copy fonts from app and index.html from .tmp
-			'connect:livereload',
-			'open',
-			'watch'
-		]);
+		grunt.task.run(['debug', 'connect:livereload', 'open', 'watch']);
 	});
 
 	grunt.registerTask('test', [
@@ -78,9 +69,9 @@ module.exports = function (grunt) {
 	grunt.registerTask('debug', [
 		'clean:dist', // clean out working directories
 		'replace:dist', // replace variables in app/index.html... notably ember data and creates .tmp/index.html
-		'concurrent:dist', // creates .tmp/scripts/compiled_templates.js & creates dist/images
+		'concurrent:debug', // creates .tmp/scripts/compiled_templates.js & creates dist/images
 		'neuter:app', // creates .tmp/scripts/combined_scripts.js
-		'copy', // copy fonts from app and index.html from .tmp
+		'copy:debug', // copy fonts from app and index.html from .tmp
 	]);
 
 	grunt.registerTask('default', [

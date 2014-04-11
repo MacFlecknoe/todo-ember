@@ -11,6 +11,7 @@ module.exports = {
 		},
 		all: [
 				'Gruntfile.js',
+				'<%= pkg.properties.paths.app %>/tasks/{,*/}*.js',
 				'<%= pkg.properties.paths.app %>/scripts/{,*/}*.js',
 				'!<%= pkg.properties.paths.app %>/vendor/*',
 				'test/spec/{,*/}*.js'

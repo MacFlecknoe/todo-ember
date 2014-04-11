@@ -38,6 +38,7 @@ module.exports = function (grunt) {
 	// branches
 	grunt.registerTask('release', [
 		'clean:all', // clean out working directories
+		'jshint:all', // tests grunt files as well as app scripts
 		'replace:release', // replace ember data references in app/index.html and creates .tmp/index.html
 		'useminPrepare', // configures concat cssmin and uglify based on meta data in index.html file
 		'concurrent:release', // creates .tmp/scripts/compiled_templates.js & dist/images
@@ -55,6 +56,7 @@ module.exports = function (grunt) {
 	// feature and development branches
 	grunt.registerTask('debug', [
 		'clean:all',
+		'jshint:all',
 		'replace:debug', // replace ember data references in app/index.html and creates .tmp/index.html
 		'concurrent:debug', // creates .tmp/scripts/compiled_templates.js
 		'neuter:all', 

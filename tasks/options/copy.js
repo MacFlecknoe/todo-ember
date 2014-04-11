@@ -1,7 +1,11 @@
+//
+// Copy files and folders.
+//
+// https://github.com/gruntjs/grunt-contrib-copy
+//
 module.exports = {
-	"fonts": {
-		"files": [
-			{
+	"all": {
+		"files": [{
 				"expand": true,
 				"flatten": true,
 				"filter": "isFile",
@@ -11,12 +15,7 @@ module.exports = {
 					"bootstrap-sass/dist/fonts/**",
 					"font-awesome/fonts/**"
 				]
-			}
-		]
-	},
-	"dist": {
-		"files": [
-			{
+			},{
 				"expand": true,
 				"dot": true,
 				"cwd": ".tmp",
@@ -31,20 +30,7 @@ module.exports = {
 		]
 	},
 	"debug": {
-		"files": [
-			{
-				"expand": true,
-				"dot": true,
-				"cwd": ".tmp",
-				"dest": "<%= pkg.properties.paths.dist %>",
-				"src": [
-					"scripts/**/*",
-					"styles/**/*",
-					"images/**/*",
-					"**/*html"
-				]
-			},
-			{
+		"files": [{
 				"expand": true,
 				"dot": true,
 				"cwd": "<%= pkg.properties.paths.app %>",
@@ -52,7 +38,6 @@ module.exports = {
 				"src": [
 					"vendor/**/*"
 				]
-			}
-		]
+		}]
 	}
 }

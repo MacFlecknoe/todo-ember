@@ -4,7 +4,7 @@
 // https://github.com/trek/grunt-neuter
 //
 module.exports = {
-	app: {
+	all: {
 		options: {
 			// specifying a base path allows you to omit said portion of the filepath from your require statements
 			basePath: '<%= pkg.properties.paths.app %>/'

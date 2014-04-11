@@ -42,13 +42,10 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('test', [
-		'clean:all', // clean out working directories
-		'replace:dist', // replace variables in app/index.html... notably ember data and creates .tmp/index.html
-		'concurrent:debug',
-		'neuter:app',
-		'copy:debug', // copy fonts from app and index.html from .tmp
-		'connect:test',
-		'mocha'
+		if (target === 'release') {
+			grunt.task.run(['release', 'connect:test', 'mocha']);
+		}
+		grunt.task.run(['debug', 'connect:test', 'mocha']);
 	]);
 
 	grunt.registerTask('release', [
@@ -63,7 +60,7 @@ module.exports = function (grunt) {
 		'copy:dist', // copy fonts from app and index.html from .tmp
 		'rev', // hash files in dist directory
 		'usemin', // update dist/index.html		,
-		'htmlmin'
+		'htmlmin' // minify dist/index.html
 	]);
 
 	grunt.registerTask('debug', [

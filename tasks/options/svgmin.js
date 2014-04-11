@@ -4,7 +4,7 @@
 // https://github.com/sindresorhus/grunt-svgmin
 //
 module.exports = {
-	"dist": {
+	"release": {
 		"files": [{
 			"expand": true,
 			"cwd": "<%= pkg.properties.paths.app %>/images",

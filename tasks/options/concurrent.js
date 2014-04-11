@@ -8,8 +8,8 @@ module.exports = {
 	'release': [
 		'emberTemplates:all',
 		'compass:release',
-		'imagemin',
-		'svgmin'
+		'imagemin:release',
+		'svgmin:release'
 	],
 	'debug': [
 		'emberTemplates:all',

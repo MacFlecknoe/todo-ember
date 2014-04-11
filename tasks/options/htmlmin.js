@@ -4,7 +4,7 @@
 // https://github.com/gruntjs/grunt-contrib-htmlmin
 //
 module.exports = {
-	dist: {
+	release: {
 		options: {
 			// strip HTML comments
 			removeComments: true,

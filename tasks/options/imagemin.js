@@ -5,7 +5,7 @@
 // https://github.com/gruntjs/grunt-contrib-imagemin
 //
 module.exports = {
-	"dist": {
+	"release": {
 		// dynamically map files
 		"files": [{
 				// enable dynamic expansion

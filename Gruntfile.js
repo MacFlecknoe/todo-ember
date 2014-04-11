@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 		'copy:all', // copy fonts from app and index.html from .tmp to dist
 		'rev', // hash files in dist directory
 		'usemin', // update dist/index.html		,
-		'htmlmin' // minify dist/index.html
+		'htmlmin:release' // minify dist/index.html
 	]);
 
 	grunt.registerTask('debug', [

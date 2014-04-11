@@ -33,20 +33,6 @@ module.exports = function (grunt) {
 
 	// Loads tasks in `tasks/` folder
 	grunt.loadTasks('tasks'); 
-	
-	grunt.registerTask('serve', function (target) {
-		if (target === 'release') {
-			return grunt.task.run(['release', 'open', 'connect:dist:keepalive']);
-		}
-		grunt.task.run(['debug', 'open', 'connect:livereload', 'watch']);
-	});
-
-	grunt.registerTask('test', [
-		if (target === 'release') {
-			grunt.task.run(['release', 'connect:test', 'mocha']);
-		}
-		grunt.task.run(['debug', 'connect:test', 'mocha']);
-	]);
 
 	grunt.registerTask('release', [
 		'clean:all', // clean out working directories
@@ -71,10 +57,24 @@ module.exports = function (grunt) {
 		'copy:debug', // copy fonts from app and index.html from .tmp
 	]);
 
+	// grunt serve:release || grunt serve
+	grunt.registerTask('serve', function (target) {
+		if (target === 'release') {
+			return grunt.task.run(['release', 'open', 'connect:dist:keepalive']);
+		}
+		grunt.task.run(['debug', 'open', 'connect:livereload', 'watch']);
+	});
+
+	// grunt test:release || grunt test
+	grunt.registerTask('test', function (target) {
+		if (target === 'release') {
+			grunt.task.run(['release', 'connect:test', 'mocha']);
+		}
+		grunt.task.run(['debug', 'connect:test', 'mocha']);
+	});
+
 	grunt.registerTask('default', [
-		'jshint',
-		'test',
-		'build'
+		'serve',
 	]);
 
 	grunt.initConfig(config);

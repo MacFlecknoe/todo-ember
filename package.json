@@ -10,13 +10,12 @@
     "repositories": {
       "snapshot": {
         "id": "snapshot-local",
-        "url": "http://localhost:8081/artifactory/libs-snapshot-local",
-        "scm_prefix": "CM-1000" 
+        "url": "http://localhost:8081/artifactory/libs-snapshot-local"
       },
       "release": {
         "id": "release-local",
         "url": "http://localhost:8081/artifactory/libs-release-local",
-        "scm-prefix": "CM-1000" 
+        "commit-prefix": "CM-1000"
       }
     },
     "ports": {

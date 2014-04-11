@@ -42,7 +42,7 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('test', [
-		'clean:dist', // clean out working directories
+		'clean:all', // clean out working directories
 		'replace:dist', // replace variables in app/index.html... notably ember data and creates .tmp/index.html
 		'concurrent:debug',
 		'neuter:app',
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('release', [
-		'clean:dist', // clean out working directories
+		'clean:all', // clean out working directories
 		'replace:dist', // replace variables in app/index.html... notably ember data and creates .tmp/index.html
 		'useminPrepare', // configures concat cssmin and uglify based on meta data
 		'concurrent:dist', // creates .tmp/scripts/compiled_templates.js & creates dist/images
@@ -67,7 +67,7 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('debug', [
-		'clean:dist', // clean out working directories
+		'clean:all', // clean out working directories
 		'replace:dist', // replace variables in app/index.html... notably ember data and creates .tmp/index.html
 		'concurrent:debug', // creates .tmp/scripts/compiled_templates.js & creates dist/images
 		'neuter:app', // creates .tmp/scripts/combined_scripts.js

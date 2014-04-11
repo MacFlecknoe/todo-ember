@@ -5,6 +5,11 @@
 // UseminPrepare is launched first, then the steps of the transformation flow (for example, concat, uglify, and cssmin), and then, 
 // in the end usemin is launched.
 //
+// UseminPrepare uses blocks in the files it pareses to determin how to confiure each of the steps it runs. Blocks are expressed as:
+// 
+// <!-- build:<type>(alternate search path) <path> -->
+//
+//
 // https://github.com/yeoman/grunt-usemin
 //
 module.exports = {

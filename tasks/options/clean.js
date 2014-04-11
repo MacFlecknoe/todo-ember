@@ -1,5 +1,10 @@
+//
+// Clean files and folders.
+//
+// https://github.com/gruntjs/grunt-contrib-clean
+//
 module.exports = {
-	dist: {
+	all: {
 		files: [{
 			dot: true,
 			src: [
@@ -8,6 +13,5 @@ module.exports = {
 				'!<%= pkg.properties.paths.dist %>/.git*'
 			]
 		}]
-	},
-	server: '.tmp'
+	}
 };

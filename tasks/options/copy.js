@@ -26,8 +26,7 @@ module.exports = {
 					"images/**/*",
 					"**/*html"
 				]
-			}
-		]
+		}]
 	},
 	"debug": {
 		"files": [{
@@ -36,8 +35,11 @@ module.exports = {
 				"cwd": "<%= pkg.properties.paths.app %>",
 				"dest": "<%= pkg.properties.paths.dist %>",
 				"src": [
-					"vendor/**/*"
+					"vendor/**/*",
+					"images/**/*",
 				]
+			}, {
+
 		}]
 	}
 }

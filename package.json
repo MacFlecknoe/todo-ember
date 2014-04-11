@@ -1,6 +1,6 @@
 {
   "name": "widget-todo",
-  "version": "0.0.1-SNAPSHOT",
+  "version": "0.0.2-SNAPSHOT",
   "dependencies": {},
   "properties": {
     "paths": {

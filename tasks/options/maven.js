@@ -5,8 +5,7 @@
 //
 module.exports = {
 	options: { 
-		groupId: 'com.jnj.wp', 
-		artifactId: '<%= pkg.name %>'
+		groupId: 'com.jnj.wp'
 	},
 	debug: {
 		options: {

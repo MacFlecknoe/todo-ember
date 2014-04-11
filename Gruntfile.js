@@ -34,6 +34,8 @@ module.exports = function (grunt) {
 	// Loads tasks in `tasks/` folder
 	grunt.loadTasks('tasks'); 
 
+	// creates a release distribution. this is equivelent to a maven release and should be deployed via release or main
+	// branches
 	grunt.registerTask('release', [
 		'clean:all', // clean out working directories
 		'replace:release', // replace variables in app/index.html... notably ember data and creates .tmp/index.html
@@ -49,6 +51,8 @@ module.exports = function (grunt) {
 		'htmlmin:release' // minify dist/index.html
 	]);
 
+	// creates a debug distribution. this is equivelent to a maven snapshot and should be deployed via  
+	// feature and development branches
 	grunt.registerTask('debug', [
 		'clean:all', // clean out working directories
 		'replace:debug', // replace variables in app/index.html... notably ember data and creates .tmp/index.html

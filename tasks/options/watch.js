@@ -4,9 +4,11 @@
 //
 module.exports = {
 	"emberTemplates": {
+		// this defines what file patterns this task will watch.
 		"files": "<%= pkg.properties.paths.app %>/templates/**/*.hbs",
 		"tasks": [
-			"emberTemplates"
+			"emberTemplates",
+			"copy:dist"
 		]
 	},
 	"compass": {
@@ -14,7 +16,8 @@ module.exports = {
 			"<%= pkg.properties.paths.app %>/styles/{,*/}*.{scss,sass}"
 		],
 		"tasks": [
-			"compass:server"
+			"compass:server",
+			"copy:dist"
 		]
 	},
 	"neuter": {
@@ -23,7 +26,8 @@ module.exports = {
 		],
 		"tasks": [
 			"jshint",
-			"neuter"
+			"neuter",
+			"copy:dist"
 		]
 	},
 	"livereload": {
@@ -31,10 +35,10 @@ module.exports = {
 			"livereload": '<%= pkg.properties.ports.livereload %>'
 		},
 		"files": [
-			".tmp/scripts/*.js",
-			"<%= pkg.properties.paths.app %>/*.html",
-			"{.tmp,<%= pkg.properties.paths.app %>}/styles/{,*/}*.css",
-			"<%= pkg.properties.paths.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}"
+			"<%= pkg.properties.paths.dist %>/scripts/*.js",
+			"<%= pkg.properties.paths.dist %>/*.html",
+			"<%= pkg.properties.paths.dist %>/styles/{,*/}*.css",
+			"<%= pkg.properties.paths.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}"
 		]
 	}
 }

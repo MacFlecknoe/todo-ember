@@ -11,16 +11,16 @@ module.exports = {
 	debug: {
 		options: {
 			goal: 'deploy',
-			repositoryId: 'snapshot-local',
-			url: 'http://localhost:8081/artifactory/libs-snapshot-local'
+			repositoryId: '<%= pkg.properties.repositories.snapshot.id %>',
+			url: '<%= pkg.properties.repositories.snapshot.url %>'
 		},
 		src: [ '<%= pkg.properties.paths.dist %>/**' ]
 	},
 	release: {
 		options: {
 			goal: 'release',
-			repositoryId: 'libs-release-local',
-			url: 'http://localhost:8081/artifactory/libs-release-local'
+			repositoryId: '<%= pkg.properties.repositories.release.id %>',
+			url: '<%= pkg.properties.repositories.release.url %>'
 		},
 		src: [ '<%= pkg.properties.paths.dist %>/**' ]
 	}

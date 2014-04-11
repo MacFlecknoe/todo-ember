@@ -7,6 +7,16 @@
       "app": "app",
       "dist": "dist"
     },
+    "repositories": {
+        "snapshot": {
+            "id": "snapshot-local",
+            "url": "http://localhost:8081/artifactory/libs-snapshot-local"
+        },
+        "release": {
+            "id": "libs-release-local",
+            "url": "http://localhost:8081/artifactory/libs-release-local"
+        }
+    },
     "ports": {
       "app": 7773,
       "livereload": 35729

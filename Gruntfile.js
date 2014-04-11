@@ -80,6 +80,14 @@ module.exports = function (grunt) {
 		grunt.task.run(['debug', 'connect:test', 'mocha']);
 	});
 
+	// creates a distribution and uploads it to artifact repository (grunt deploy:release || grunt deploy:debug)
+	grunt.registerTask('deploy', function (target) {
+		if (target === 'release') {
+			grunt.task.run(['release', 'maven:release']);
+		}
+		grunt.task.run(['debug', 'maven:debug']);
+	});
+
 	grunt.registerTask('default', [
 		'serve:debug',
 	]);

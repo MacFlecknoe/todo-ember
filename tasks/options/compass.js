@@ -28,8 +28,9 @@ module.exports = {
 		// Make Compass asset helpers generate relative urls to assets.
 		relativeAssets: false
 	},
-	dist: {},
-	server: {
+	release: {
+	},
+	debug: {
 		options: {
 			debugInfo: true
 		}

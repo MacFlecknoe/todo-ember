@@ -1,21 +1,18 @@
+//
+// Run grunt tasks concurrently
+//
+// https://github.com/sindresorhus/grunt-concurrent
+//
 module.exports = {
 	// confignured in Grunt file
-	'server': [
-		'emberTemplates',
-		'compass:server'
-	],
-	'test': [
-		'emberTemplates',
-		'compass'
-	],
-	'dist': [
-		'emberTemplates',
-		'compass:dist',
+	'release': [
+		'emberTemplates:all',
+		'compass:release',
 		'imagemin',
 		'svgmin'
 	],
 	'debug': [
-		'emberTemplates',
-		'compass:dist',
+		'emberTemplates:all',
+		'compass:debug',
 	]
 }

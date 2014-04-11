@@ -12,7 +12,10 @@ module.exports = {
 		'emberTemplates',
 		'compass:dist',
 		'imagemin',
-		'svgmin',
-		'htmlmin'
+		'svgmin'
+	],
+	'debug': [
+		'emberTemplates',
+		'compass:dist',
 	]
 }

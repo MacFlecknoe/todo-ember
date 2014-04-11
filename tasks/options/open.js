@@ -1,5 +1,6 @@
 //
 // Open urls and files from a grunt task. 
+//
 // https://github.com/jsoverson/grunt-open
 //
 module.exports = {

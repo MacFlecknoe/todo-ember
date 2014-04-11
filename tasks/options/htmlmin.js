@@ -1,5 +1,6 @@
 //
 // Minifies HTML using html-minifier
+//
 // https://github.com/gruntjs/grunt-contrib-htmlmin
 //
 module.exports = {
@@ -15,11 +16,11 @@ module.exports = {
 			// enable dynamic expansion
 			expand: true,
 			// src matches are relative to this path
-			cwd: '<%= pkg.properties.paths.app %>',
+			cwd: 'dist',
 			// actual patterns to match
 			src: ['*.html'],
 			// destination path prefix
-			dest: '<%= pkg.properties.paths.dist %>'
+			dest: 'dist'
 		}]
 	}
 }

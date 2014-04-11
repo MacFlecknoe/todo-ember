@@ -13,16 +13,14 @@ module.exports = {
 			livereload: '<%= pkg.properties.ports.livereload %>',
 			// The base (or root) directory from which files will be served.
 			base: [
-				'.tmp', 
-				'<%= pkg.properties.paths.app %>'
+				'<%= pkg.properties.paths.dist %>'
 			]
 		}
 	},
 	test: {
 		options: {
 			base: [
-				'test', 
-				'.tmp'
+				'<%= pkg.properties.paths.dist %>'
 			]
 		}
 	},

@@ -1,6 +1,7 @@
 //
 // Minify images using OptiPNG, pngquant, jpegtran and gifsicle. Performs progressive 
 // and interlaced compression by default.
+//
 // https://github.com/gruntjs/grunt-contrib-imagemin
 //
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
 				// actual patterns to match
 				"src": "{,*/}*.{png,jpg,jpeg}",
 				// destination path prefix
-				"dest": "<%= pkg.properties.paths.dist %>/images"
+				"dest": ".tmp/images"
 		}]
 	}
 }

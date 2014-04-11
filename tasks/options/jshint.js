@@ -1,5 +1,6 @@
 //
 // Validate files with JSHint.
+//
 // https://github.com/gruntjs/grunt-contrib-jshint
 //
 module.exports = {

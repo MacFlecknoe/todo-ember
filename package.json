@@ -11,7 +11,7 @@
       "snapshot": {
         "id": "snapshot-local",
         "url": "http://localhost:8081/artifactory/libs-snapshot-local",
-        "scm-prefix": "CM-1000" 
+        "scm_prefix": "CM-1000" 
       },
       "release": {
         "id": "release-local",

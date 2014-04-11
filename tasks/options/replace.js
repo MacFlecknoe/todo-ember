@@ -4,7 +4,7 @@
 // https://github.com/outaTiME/grunt-replace
 //
 module.exports = {
-	"app": {
+	"debug": {
 		"options": {
 			// This is the old way to define patterns using plain object (simple variable lookup mechanism and no regexp support), 
 			// you can still using but for more control you should use the new patterns way.
@@ -19,7 +19,7 @@ module.exports = {
 			"dest": ".tmp/index.html"
 		}]
 	},
-	"dist": {
+	"release": {
 		"options": {
 			"variables": {
 				"ember": "vendor/ember/ember.prod.js",

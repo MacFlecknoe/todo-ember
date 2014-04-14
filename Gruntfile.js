@@ -40,9 +40,11 @@ module.exports = function (grunt) {
 		'clean:all', // clean out working directories
 		'jshint:all', // tests grunt files as well as app scripts
 		'replace:release', // replace ember data references in app/index.html and creates .tmp/index.html
-		'useminPrepare', // configures concat cssmin and uglify based on meta data in index.html file
-		'concurrent:release', // creates .tmp/scripts/compiled_templates.js & dist/images
+		'emberTemplates:all', // creates .tmp/scripts/compiled_templates.js
 		'neuter:all', // includes files in require statments and creates .tmp/scripts/combined_scripts.js
+		'imagemin:release', // creates dist/image
+		'svgmin:release',
+		'useminPrepare', // configures concat cssmin and uglify based on meta data in index.html file
 		'concat', // creates combined css and js files in .tmp
 		'cssmin', // creates css files in dist
 		'uglify', // creates js files in dist
@@ -58,7 +60,7 @@ module.exports = function (grunt) {
 		'clean:all',
 		'jshint:all',
 		'replace:debug', // replace ember data references in app/index.html and creates .tmp/index.html
-		'concurrent:debug', // creates .tmp/scripts/compiled_templates.js
+		'emberTemplates:all', 
 		'neuter:all', 
 		'copy:all', 
 		'copy:debug', // copy vendor files and images from app to dist

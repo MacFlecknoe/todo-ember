@@ -1,18 +1,13 @@
 //
-// Run grunt tasks concurrently
+// Run grunt tasks concurrently. 
+//
+// TODO If processing time becomes an issue we should see what can be run in parrallel.
 //
 // https://github.com/sindresorhus/grunt-concurrent
 //
 module.exports = {
-	// confignured in Grunt file
 	'release': [
-		'emberTemplates:all',
-		'compass:release',
-		'imagemin:release',
-		'svgmin:release'
 	],
 	'debug': [
-		'emberTemplates:all',
-		'compass:debug',
 	]
 }

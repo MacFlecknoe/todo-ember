@@ -95,4 +95,7 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.initConfig(config);
+
+	// npm ERR!   git config --global user.email "you@example.com"
+	// npm ERR!   git config --global user.name "Your Name"
 };

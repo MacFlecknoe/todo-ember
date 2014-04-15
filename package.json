@@ -1,12 +1,12 @@
 {
-    "groupId": "com.jnj.wp",
     "name": "widget-todo",
     "version": "0.2.2-SNAPSHOT",
     "description": "Proof of concept project to test build",
     "dependencies": {
     },
     "config": {
-        "artifact": {
+        "maven_tasks": {
+            "groupId": "com.jnj.wp",
             "commit_prefix": "ARCHITECT-123",
             "repositories": {
                 "snapshot": {

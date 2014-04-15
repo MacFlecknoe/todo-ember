@@ -5,7 +5,7 @@
     "dependencies": {
     },
     "config": {
-        "maven_tasks": {
+        "maven": {
             "groupId": "com.jnj.wp",
             "commit_prefix": "ARCHITECT-123",
             "repositories": {

@@ -63,7 +63,7 @@ module.exports = function (grunt) {
 		'emberTemplates:all', 
 		'neuter:all', 
 		'copy:all', 
-		'copy:debug', // copy vendor files and images from app to dist
+		'copy:debug' // copy vendor files and images from app to dist
 	]);
 
 	// creates a distribution and opens it up in a web browser (grunt serve:release || grunt serve:debug)
@@ -85,9 +85,9 @@ module.exports = function (grunt) {
 	// creates a distribution and uploads it to artifact repository (grunt deploy:release || grunt deploy:debug)
 	grunt.registerTask('deploy', function (target) {
 		if (target === 'release') {
-			return grunt.task.run(['release', 'maven:release']);
+			return grunt.task.run(['test:release', 'maven:release']);
 		}
-		return grunt.task.run(['debug', 'maven:debug']);
+		return grunt.task.run(['test:debug', 'maven:debug']);
 	});
 
 	grunt.registerTask('default', [

@@ -69,9 +69,9 @@ module.exports = function (grunt) {
 	// creates a distribution and opens it up in a web browser (grunt serve:release || grunt serve:debug)
 	grunt.registerTask('serve', function (target) {
 		if (target === 'release') {
-			return grunt.task.run(['release', 'open', 'connect:dist:keepalive']);
+			return grunt.task.run(['release', 'open:all', 'connect:all:keepalive']);
 		}
-		return grunt.task.run(['debug', 'open', 'connect:livereload', 'watch']);
+		return grunt.task.run(['debug', 'open:all', 'connect:all', 'watch']);
 	});
 
 	// creates a distribution and runs tests against it (grunt test:release || grunt test:debug)

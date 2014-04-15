@@ -4,8 +4,8 @@
 // https://github.com/jsoverson/grunt-open
 //
 module.exports = {
-	"server": {
+	all: {
 		// opens a web browser to the hosted application for viewing
-		"path": "http://<%= pkg.properties.hostname %>:<%= pkg.properties.ports.app %>"
+		path: 'http://<%= pkg.properties.hostname %>:<%= pkg.properties.ports.app %>'
 	}
 }

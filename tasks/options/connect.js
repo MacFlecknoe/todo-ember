@@ -7,7 +7,7 @@ module.exports = {
 		port: '<%= pkg.properties.ports.app %>',
 		hostname: '<%= pkg.properties.hostname %>'
 	},
-	livereload: {
+	all: {
 		options: {
 			// Inject a live reload script tag into your page using connect-livereload
 			livereload: '<%= pkg.properties.ports.livereload %>',
@@ -19,14 +19,6 @@ module.exports = {
 	},
 	test: {
 		options: {
-			base: [
-				'<%= pkg.properties.paths.dist %>'
-			]
-		}
-	},
-	dist: {
-		options: {
-			livereload: '<%= pkg.properties.ports.livereload %>',
 			base: [
 				'<%= pkg.properties.paths.dist %>'
 			]

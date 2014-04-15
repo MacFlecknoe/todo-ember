@@ -20,7 +20,7 @@ module.exports = {
 	test: {
 		options: {
 			base: [
-				'dist'
+				'test'
 			]
 		}
 	}

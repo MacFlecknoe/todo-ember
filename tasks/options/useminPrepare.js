@@ -15,7 +15,7 @@
 module.exports = {
 	options: {
 		// the root directory from which your files will be resolved.
-		root: '<%= pkg.properties.paths.app %>',
+		root: 'app',
 		// base directory where the transformed files should be output.
 		dest: '.tmp'
 	},

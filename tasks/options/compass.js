@@ -6,19 +6,19 @@
 module.exports = {
 	options: {
 		// The source directory where you keep your Sass stylesheets.
-		sassDir: "<%= pkg.properties.paths.app %>/styles",
+		sassDir: "app/styles",
 		//  The target directory where you keep your CSS stylesheets.
 		cssDir: ".tmp/styles",
 		// The directory where generated images are kept. 
 		generatedImagesDir: ".tmp/images/generated",
 		// The directory where you keep your images.
-		imagesDir: "<%= pkg.properties.paths.app %>/images",
+		imagesDir: "app/images",
 		// The directory where you keep your JavaScript files.
-		javascriptsDir: "<%= pkg.properties.paths.app %>/scripts",
+		javascriptsDir: "app/scripts",
 		// The directory where you keep your fonts.
-		fontsDir: "<%= pkg.properties.paths.app %>/styles/fonts",
+		fontsDir: "app/styles/fonts",
 		// Makes files under the specified folder findable by Sass's @import directive.
-		importPath: "<%= pkg.properties.paths.app %>/vendor",
+		importPath: "app/vendor",
 		// The full http path to images on the web server. Default: httpPath + "/" + imagesDir (is this needed?)
 		httpImagesPath: "/images",
 		// The full http path to generated images on the web server.

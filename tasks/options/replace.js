@@ -15,7 +15,7 @@ module.exports = {
 		},
 		"files": [{
 			// files to perform replace on
-			"src": "<%= pkg.properties.paths.app %>/index.html",
+			"src": "app/index.html",
 			"dest": ".tmp/index.html"
 		}]
 	},
@@ -27,7 +27,7 @@ module.exports = {
 			}
 		},
 		"files": [{
-			"src": "<%= pkg.properties.paths.app %>/index.html",
+			"src": "app/index.html",
 			"dest": ".tmp/index.html"
 		}]
 	}

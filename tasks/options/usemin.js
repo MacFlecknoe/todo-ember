@@ -11,13 +11,13 @@
 module.exports = {
 	options: {
 		dirs: [
-			'<%= pkg.properties.paths.dist %>'
+			'dist'
 		]
 	},
 	html: [
-		'<%= pkg.properties.paths.dist %>/{,*/}*.html'
+		'dist/{,*/}*.html'
 	],
 	css: [
-		'<%= pkg.properties.paths.dist %>/styles/{,*/}*.css'
+		'dist/styles/{,*/}*.css'
 	]
 }

@@ -1,12 +1,10 @@
 {
     "name": "widget-todo",
     "version": "0.2.2-SNAPSHOT",
-    "dependencies": {},
-    "properties": {
-        "paths": {
-            "app": "app",
-            "dist": "dist"
-        },
+    "description": "Proof of concept project to test build",
+    "dependencies": {
+    },
+    "config": {
         "artifact": {
             "groupId": "com.jnj.wp",
             "repositories": {

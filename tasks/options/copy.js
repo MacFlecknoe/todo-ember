@@ -9,17 +9,17 @@ module.exports = {
 				"expand": true,
 				"flatten": true,
 				"filter": "isFile",
-				"cwd": "<%= pkg.properties.paths.app %>/vendor/",
+				"cwd": "app/vendor/",
 				"dest": ".tmp/styles/fonts/",
 				"src": [
 					"bootstrap-sass/dist/fonts/**",
 					"font-awesome/fonts/**"
 				]
-			},{
+			}, {
 				"expand": true,
 				"dot": true,
 				"cwd": ".tmp",
-				"dest": "<%= pkg.properties.paths.dist %>",
+				"dest": "dist",
 				"src": [
 					"scripts/**/*",
 					"styles/**/*",
@@ -32,14 +32,12 @@ module.exports = {
 		"files": [{
 				"expand": true,
 				"dot": true,
-				"cwd": "<%= pkg.properties.paths.app %>",
-				"dest": "<%= pkg.properties.paths.dist %>",
+				"cwd": "app",
+				"dest": "dist",
 				"src": [
 					"vendor/**/*",
 					"images/**/*",
 				]
-			}, {
-
 		}]
 	}
 }

@@ -7,7 +7,7 @@ module.exports = {
 	"release": {
 		"files": [{
 			"expand": true,
-			"cwd": "<%= pkg.properties.paths.app %>/images",
+			"cwd": "app/images",
 			"src": "{,*/}*.svg",
 			"dest": ".tmp/images"
 		}]

@@ -7,10 +7,10 @@ module.exports = {
 	all: {
 		options: {
 			// specifying a base path allows you to omit said portion of the filepath from your require statements
-			basePath: '<%= pkg.properties.paths.app %>/'
+			basePath: 'app/'
 		},
 		// source file with require statements
-		src: '<%= pkg.properties.paths.app %>/scripts/app.js',
+		src: 'app/scripts/app.js',
 		dest: '.tmp/scripts/combined-scripts.js'
 	}
 }

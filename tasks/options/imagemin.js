@@ -11,7 +11,7 @@ module.exports = {
 				// enable dynamic expansion
 				"expand": true,
 				// src matches are relative to this path
-				"cwd": "<%= pkg.properties.paths.app %>/images",
+				"cwd": "app/images",
 				// actual patterns to match
 				"src": "{,*/}*.{png,jpg,jpeg}",
 				// destination path prefix

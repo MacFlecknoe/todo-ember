@@ -32,7 +32,7 @@ module.exports = {
 	},
 	"livereload": {
 		"options": {
-			"livereload": '<%= pkg.properties.ports.livereload %>'
+			"livereload": '<%= pkg.properties.servers.livereload.port %>'
 		},
 		"files": [
 			"<%= pkg.properties.paths.dist %>/scripts/*.js",

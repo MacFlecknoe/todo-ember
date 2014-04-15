@@ -6,6 +6,6 @@
 module.exports = {
 	all: {
 		// opens a web browser to the hosted application for viewing
-		path: 'http://<%= pkg.properties.hostname %>:<%= pkg.properties.ports.app %>'
+		path: 'http://<%= pkg.properties.servers.app.hostname %>:<%= pkg.properties.servers.app.port %>'
 	}
 }

@@ -4,13 +4,13 @@
 //
 module.exports = {
 	options: {
-		port: '<%= pkg.properties.ports.app %>',
-		hostname: '<%= pkg.properties.hostname %>'
+		port: '<%= pkg.properties.servers.app.port %>',
+		hostname: '<%= pkg.properties.servers.app.hostname %>'
 	},
 	all: {
 		options: {
 			// Inject a live reload script tag into your page using connect-livereload
-			livereload: '<%= pkg.properties.ports.livereload %>',
+			livereload: '<%= pkg.properties.servers.livereload.port %>',
 			// The base (or root) directory from which files will be served.
 			base: [
 				'<%= pkg.properties.paths.dist %>'

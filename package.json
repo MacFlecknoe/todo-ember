@@ -1,6 +1,6 @@
 {
   "name": "widget-todo",
-  "version": "0.3.0-SNAPSHOT",
+  "version": "0.3.6-SNAPSHOT",
   "description": "Proof of concept project to test build",
   "dependencies": {},
   "config": {

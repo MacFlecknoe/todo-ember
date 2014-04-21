@@ -28,7 +28,7 @@ module.exports = {
 		},
 		src: [ 'dist/**' ]
 	},
-	release-deploy-only: {
+	deploy_release: {
 		options: {
 			goal: 'deploy',
 			repositoryId: '<%= pkg.config.maven.repositories.release.id %>',

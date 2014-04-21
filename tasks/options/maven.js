@@ -1,7 +1,7 @@
 //
 // Install artifacts locally or deploy and release articats to maven repository. 
 //
-// As the 'release' target automatically increments the version number of the project
+// As the 'versioned_release' target automatically increments the version number of the project
 // and checks it into version control, in order for release to work properly everything 
 // will need to have been commited to git prior to running the task.
 //
@@ -19,7 +19,7 @@ module.exports = {
 		},
 		src: [ 'dist/**' ]
 	},
-	release: {
+	bump_release: {
 		options: {
 			goal: 'release',
 			repositoryId: '<%= pkg.config.maven.repositories.release.id %>',
@@ -28,7 +28,7 @@ module.exports = {
 		},
 		src: [ 'dist/**' ]
 	},
-	release_deploy_only: {
+	release: {
 		options: {
 			goal: 'deploy',
 			repositoryId: '<%= pkg.config.maven.repositories.release.id %>',

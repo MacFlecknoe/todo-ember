@@ -1,9 +1,9 @@
 //
 // Install artifacts locally or deploy and release articats to maven repository. 
 //
-// As the release target automatically increments the version number of the project, 
-// in order for release to work properly everything will need to have been commited to 
-// git prior to running the task.
+// As the 'release' target automatically increments the version number of the project
+// and checks it into version control, in order for release to work properly everything 
+// will need to have been commited to git prior to running the task.
 //
 // https://github.com/smh/grunt-maven-tasks
 //
@@ -28,7 +28,7 @@ module.exports = {
 		},
 		src: [ 'dist/**' ]
 	},
-	deploy_release: {
+	release_deploy_only: {
 		options: {
 			goal: 'deploy',
 			repositoryId: '<%= pkg.config.maven.repositories.release.id %>',
